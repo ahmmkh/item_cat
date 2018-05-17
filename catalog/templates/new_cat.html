@@ -1,0 +1,13 @@
+
+{% extends 'layout.html' %} {% block content %}
+<form action="{{ url_for("add_cat")}}" method="POST">
+
+    <div class="form-group">
+        <label for="title">title</label>
+        <input type="text" name="name" class="form-control" id="title" placeholder="Enter title">
+        <small id="texthelp" class="form-text text-muted">title.</small>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock content %}

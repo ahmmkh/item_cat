@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<ul>
+
+{% for element in cat%}
+<li>
+{{element.name}}
+</li>
+{%  endfor %}
+
+</ul>
+{% endblock %}

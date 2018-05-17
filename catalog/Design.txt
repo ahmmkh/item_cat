@@ -1,0 +1,6 @@
+there is categories : 
+    everty category have some items 
+    items within the category can be updated , deleted , added 
+    every category has it's own name and id 
+there is items: 
+every item has it's own id ,name ,description,and cat_id (foregin key)

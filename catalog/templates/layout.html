@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="en">
+<!-- i used bootstrap for this project-->
+
+<head>
+    <title>Ahmed Khatab - portfolio</title>
+    <!-- Required meta tags -->{% block header %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+        {% endblock %}
+</head>
+{% block script %}{% endblock %}
+<body>
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="heading-color navbar-brand" href="#">Item Catalouge</a>
+            <div class="navbar-collapse collapse" id="navbarTogglerDemo02" aria-expanded="false" role="navigation">
+                <ul class="navbar-nav ml-auto  mt-2 mt-md-0">
+                    <li class="nav-item">
+                        {% if 'username' not in session%}
+                        <a class="nav-link" href="{{ url_for("login_s") }}">login</a>
+                        {% else %}
+                        <a class="nav-link" href="{{url_for("logout")}}">Logout</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header><div class="container">
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
