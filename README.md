@@ -55,8 +55,6 @@ pep8 python catalog.py
 
 * **Ahmed Khatab** - *Initial work* - [ahmmkh](https://github.com/ahmmkh)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License 
