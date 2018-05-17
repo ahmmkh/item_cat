@@ -4,9 +4,11 @@
 
 {% for element in cat%}
 <li>
-{{element.name}}
+<a href="{{url_for("show_cat_items",catname = element.name)}}">{{element.name}}</a>
+
 </li>
 {%  endfor %}
+<a href="{{url_for("add_cat")}}" class="btn btn-primary">add_cat</a>
 
 </ul>
 {% endblock %}

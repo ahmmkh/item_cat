@@ -9,6 +9,6 @@
 
 </li>
 {%  endfor %}
-
+<a href="{{url_for("add_item",catname = cat.name)}}" class="btn btn-primary">Add Item</a>
 </ul>
 {% endblock %}
