@@ -264,8 +264,9 @@ def delete_item(catname, item_id):
     else:
         return render_template("delete_item.html", cat=catname, item=deleted_item)
 
-app.secret_key = 'super_secret_key'
+
 if __name__ == '__main__':
-    app.config['SESSION_TYPE'] = 'filesystem'
-    app.debug = True
+    app.secret_key = 'super_secret_key'
+   
+ app.debug = True
     app.run(host="0.0.0.0", port=5000)
